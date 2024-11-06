@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreeperVM</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Minecraft', Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #2d2d2d;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #50c878;
+            text-shadow: 2px 2px #000000;
+        }
+
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #50c878;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #50c878;
+            text-shadow: 2px 2px #000000;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Creeper Face */
+        .creeper-face {
+            width: 200px;
+            height: 200px;
+            background-color: #50c878;
+            margin: 2rem auto;
+            position: relative;
+            box-shadow: 0 0 20px rgba(80, 200, 120, 0.5);
+        }
+
+        .creeper-face::before,
+        .creeper-face::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #000000;
+            top: 60px;
+        }
+
+        .creeper-face::before {
+            left: 40px;
+        }
+
+        .creeper-face::after {
+            right: 40px;
+        }
+
+        .creeper-mouth {
+            position: absolute;
+            width: 120px;
+            height: 60px;
+            background-color: #000000;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Button */
+        .cta-button {
+            display: inline-block;
+            background-color: #50c878;
+            color: #000000;
+            padding: 0.8rem 1.5rem;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #3da15e;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d2d2d;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0 0.75rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            nav ul li {
+                margin: 0 0.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .creeper-face {
+                width: 150px;
+                height: 150px;
+            }
+
+            .creeper-face::before,
+            .creeper-face::after {
+                width: 30px;
+                height: 30px;
+                top: 45px;
+            }
+
+            .creeper-face::before {
+                left: 30px;
+            }
+
+            .creeper-face::after {
+                right: 30px;
+            }
+
+            .creeper-mouth {
+                width: 90px;
+                height: 45px;
+                bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">CreeperVM</div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Welcome to CreeperVM</h1>
+            <p>Experience the explosive power of our virtual machine, inspired by Minecraft's most iconic mob!</p>
+            <div class="creeper-face">
+                <div class="creeper-mouth"></div>
+            </div>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+    </main>
+</body>
+  </html>
